@@ -37,27 +37,6 @@ Panel para hacer consultas en lenguaje natural. El agente puede ejecutar código
 
 Este repositorio se publica como una demostración del código fuente y de las ideas de diseño implementadas. No se distribuye un binario oficial (.exe) desde este repositorio; la forma recomendada de ejecución es clonar el proyecto y ejecutar la aplicación localmente siguiendo la sección "Cómo descargar y ejecutar localmente".
 
-## Contribuciones
-
-Se aceptan contribuciones que mejoren la claridad del código, la documentación o la experiencia de usuario. Para contribuir:
-
-- Abre un issue describiendo la mejora o el bug.
-- Crea un branch con un PR que incluya cambios pequeños y revisables.
-
-Por favor añade pruebas o instrucciones reproduceibles para cambios funcionales importantes.
-
-## Licencia
-
-Salvo indicación contraria en un fichero `LICENSE`, este repositorio se comparte con fines demostrativos. Si deseas una licencia explícita (por ejemplo MIT), indícamelo y puedo añadirla.
-
-## Contacto
-
-Para preguntas técnicas o soporte relacionado con este repositorio, abre un issue en GitHub.
-
----
-
-Gracias por revisar el proyecto. Si quieres que incluya un conjunto de datos de ejemplo o instrucciones adicionales para despliegue, dime y lo añado.
-
 ## Cómo descargar y ejecutar localmente (resumen rápido)
 
 1) Clona el repositorio y crea un entorno virtual:
