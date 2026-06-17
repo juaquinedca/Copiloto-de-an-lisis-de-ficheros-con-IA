@@ -28,6 +28,11 @@ jobs:
           pyinstaller --noconfirm --onedir --name AnalizarDatosIA launcher.py \
             --collect-all streamlit \
             --collect-all importlib_metadata \
+            --collect-submodules streamlit \
+            --copy-metadata streamlit \
+            --hidden-import streamlit.web.cli \
+            --hidden-import streamlit.web.bootstrap \
+            --hidden-import importlib_metadata \
             --add-data "app.py;." \
             --add-data "imagenes;imagenes" \
             --log-level DEBUG
