@@ -18,6 +18,20 @@ if not exist ".venv\Scripts\activate" (
 
 :: Activar venv
 call .venv\Scripts\activate
+:: Preguntar por .env y GROQ_API_KEY antes de instalar dependencias
+if not exist .env (
+  echo.
+  choice /M "¿Deseas crear un archivo .env y añadir GROQ_API_KEY ahora?"
+  if errorlevel 2 goto SKIP_ENV_CREATION
+  set /p KEY="Introduce tu GROQ_API_KEY: "
+  if defined KEY (
+    echo GROQ_API_KEY=%KEY%> .env
+    echo .env creado.
+  ) else (
+    echo No se ingreso clave. Puedes crear .env manualmente luego.
+  )
+)
+:SKIP_ENV_CREATION
 
 :: Actualizar pip e instalar dependencias
 python -m pip install --upgrade pip
@@ -26,21 +40,6 @@ if exist requirements.txt (
   pip install -r requirements.txt
 ) else (
   echo No se encontro requirements.txt. Omite la instalacion de dependencias.
-)
-
-:: Crear .env si el usuario lo desea
-if not exist .env (
-  echo.
-  set /p CREARENV="¿Deseas crear un archivo .env y añadir GROQ_API_KEY ahora? (s/N): "
-  if /I "%CREARENV%"=="s" (
-    set /p KEY="Introduce tu GROQ_API_KEY: "
-    if defined KEY (
-      echo GROQ_API_KEY=%KEY%> .env
-      echo .env creado.
-    ) else (
-      echo No se ingreso clave. Puedes crear .env manualmente luego.
-    )
-  )
 )
 
 echo Iniciando la aplicacion Streamlit...
