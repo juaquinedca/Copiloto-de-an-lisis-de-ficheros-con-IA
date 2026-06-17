@@ -59,6 +59,21 @@ Puedes descargar la versión empaquetada desde la sección de Releases: https://
 
 Descarga el ZIP de la release y extrae el contenido; luego haz doble click en `Iniciar_Programa.bat` (Windows) o ejecuta `./run.sh` (macOS/Linux).
 
+## Release descargable (Windows)
+
+- Release: [v1.0.4](https://github.com/juaquinedca/Copiloto-de-an-lisis-de-ficheros-con-IA/releases/tag/v1.0.4)
+- Asset: `AnalizarDatosIA-v1.0.4-windows.zip` (extraer y hacer doble click en `AnalizarDatosIA.exe`)
+
+**Verificación:** SHA256 checksum para la descarga oficial (archivo `ASSETS_CHECKSUMS.txt` en el repo):
+
+```
+AnalizarDatosIA-v1.0.4-windows.zip  6753E82E18948EC73BC2A46ABD4329E2BAA265E26AF6CDC3421262C848B71CA5
+```
+
+Badge de descarga rápida (Release v1.0.4):
+
+[![Release v1.0.4](https://img.shields.io/badge/release-v1.0.4-blue)](https://github.com/juaquinedca/Copiloto-de-an-lisis-de-ficheros-con-IA/releases/tag/v1.0.4)
+
 ## Capturas de pantalla
 
 Las siguientes imágenes muestran la interfaz y las funcionalidades principales en el mismo orden en que se navega la aplicación.
