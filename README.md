@@ -30,6 +30,29 @@ Ejecuta la aplicación:
 streamlit run app.py
 ```
 
+## Quick start (ejecución con un solo click o comando)
+
+Para que cualquiera descargue y ejecute la aplicación con el mínimo esfuerzo, he añadido lanzadores para los sistemas más comunes.
+
+- Windows (doble click): ejecuta `Iniciar_Programa.bat`. Este script crea/activa un entorno virtual `.venv`, instala `requirements.txt`, opcionalmente crea un `.env` con `GROQ_API_KEY` y lanza Streamlit.
+
+- PowerShell (ejecución recomendada si se requiere permisos): ejecuta `Iniciar_Programa.ps1` desde PowerShell:
+	```powershell
+	Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+	.\Iniciar_Programa.ps1
+	```
+
+- macOS / Linux: ejecuta el script `run.sh`:
+	```bash
+	chmod +x run.sh
+	./run.sh
+	```
+
+Notas:
+- Requiere Python 3.11+ instalado en el sistema.
+- No subas tu `.env` al repositorio; el script pregunta si deseas crearlo localmente.
+- Para una demo pública inmediata, también puedes desplegar el repo en Streamlit Cloud conectando tu cuenta de GitHub.
+
 ## Capturas de pantalla
 
 Las siguientes imágenes muestran la interfaz y las funcionalidades principales en el mismo orden en que se navega la aplicación.
