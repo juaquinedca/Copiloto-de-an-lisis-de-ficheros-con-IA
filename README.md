@@ -26,23 +26,6 @@ GROQ_API_KEY=tu_clave_aqui
 `
 
 Ejecuta la aplicación:
-`powershell
+```powershell
 streamlit run app.py
-# o
-python run_app.py
-`
-
-## Despliegue recomendado (Streamlit Cloud)
-1. Sube este repositorio a GitHub.
-2. Conecta el repo en https://share.streamlit.io.
-3. En Settings → Secrets, añade GROQ_API_KEY.
-4. Despliega la app (Streamlit instalará equirements.txt).
-
-> Nota: He eliminado Dockerfile del repo para simplificar el despliegue por Streamlit y evitar peso adicional.
-
-## Seguridad y advertencias
-- No subas claves ni .env al repositorio (ya están en .gitignore).
-- El agente ejecuta código Python dinámico; usa la app con datasets de confianza y en entornos controlados.
-
-## Licencia
-MIT. Ver archivo LICENSE.
+```
