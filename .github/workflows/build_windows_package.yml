@@ -1,0 +1,53 @@
+name: Build Windows package (PyInstaller)
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller
+
+      - name: Build with PyInstaller (onedir)
+        run: |
+          pyinstaller --noconfirm --onedir --name AnalizarDatosIA launcher.py --add-data "app.py;." --add-data "imagenes;imagenes"
+
+      - name: Create zip of dist folder
+        run: |
+          $zipName = "AnalizarDatosIA-${{ github.ref_name }}-windows.zip"
+          Compress-Archive -Path dist\AnalizarDatosIA\* -DestinationPath $zipName
+          Write-Host "Created $zipName"
+
+      - name: Create Release (if not exists)
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref_name }}
+          release_name: ${{ github.ref_name }}
+          body: "Windows packaged build (PyInstaller) for ${{ github.ref_name }}"
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: AnalizarDatosIA-${{ github.ref_name }}-windows.zip
+          asset_name: AnalizarDatosIA-${{ github.ref_name }}-windows.zip
+          asset_content_type: application/zip
