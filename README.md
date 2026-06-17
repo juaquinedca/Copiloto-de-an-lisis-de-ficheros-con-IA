@@ -11,34 +11,30 @@ Tecnologías principales: Python 3.11, Streamlit, Pandas, Matplotlib, Seaborn.
 ## Ejemplo (capturas)
 Incluye varias capturas en `imagenes/` que muestran la carga de datos, KPIs, insights y visualizaciones.
 
-## Capturas de pantalla
+## Estado del proyecto
 
-Las siguientes imágenes muestran la interfaz y las funcionalidades principales en el mismo orden en que se navega la aplicación.
+Este repositorio se publica como una demostración del código fuente y de las ideas de diseño implementadas. No se distribuye un binario oficial (.exe) desde este repositorio; la forma recomendada de ejecución es clonar el proyecto y ejecutar la aplicación localmente siguiendo la sección "Cómo descargar y ejecutar localmente".
 
-### 1) Carga y configuración / Vista previa y KPIs
-![Carga y configuración](imagenes/imag_1.png)
-Pantalla inicial con el panel lateral donde se cargan los archivos (CSV, Excel, JSON), botón para resetear la sesión y pequeñas indicaciones de uso.
-Previsualización de las primeras filas del `DataFrame` y tarjetas KPI que muestran total de filas, columnas, porcentaje de datos completos y duplicados.
+## Contribuciones
 
-### 2) Calidad de datos (% nulos)
-![Vista previa del dataset](imagenes/imag_2.png)
-Gráfico horizontal que presenta el porcentaje de valores nulos por columna, con líneas de referencia para alertar (5% y 20%).
-Gráfico tipo donut que resume la proporción de columnas numéricas, de texto y de fecha.
+Se aceptan contribuciones que mejoren la claridad del código, la documentación o la experiencia de usuario. Para contribuir:
 
-### 3) Insights automáticos con IA
-![Insights con IA](imagenes/imag_3.png)
-Sección que muestra los 3 hallazgos automáticos generados por el modelo, pensados para ser breves y accionables.
+- Abre un issue describiendo la mejora o el bug.
+- Crea un branch con un PR que incluya cambios pequeños y revisables.
 
-### 4) Reportes automáticos
-![Reportes automáticos](imagenes/imag_4.png)
-Herramientas para generar resúmenes de información general y estadísticas descriptivas; posibilidad de descargar los reportes en PDF.
+Por favor añade pruebas o instrucciones reproduceibles para cambios funcionales importantes.
 
-### 5) Consultas y visualizaciones
-![Consultas y visualizaciones](imagenes/imag_6.png)
-Panel para hacer consultas en lenguaje natural.
+## Licencia
 
-![Consultas y visualizaciones](imagenes/imag_7.png)
-El agente puede ejecutar código Python internamente y generar visualizaciones que se renderizan en la interfaz.
+Salvo indicación contraria en un fichero `LICENSE`, este repositorio se comparte con fines demostrativos. Si deseas una licencia explícita (por ejemplo MIT), indícamelo y puedo añadirla.
+
+## Contacto
+
+Para preguntas técnicas o soporte relacionado con este repositorio, abre un issue en GitHub.
+
+---
+
+Gracias por revisar el proyecto. Si quieres que incluya un conjunto de datos de ejemplo o instrucciones adicionales para despliegue, dime y lo añado.
 
 ## Cómo descargar y ejecutar localmente (resumen rápido)
 
@@ -67,10 +63,16 @@ streamlit run app.py
 
 Alternativa de doble click (Windows): usa `Iniciar_Programa.bat` — el script crea/activa `.venv` e instala dependencias si no existen.
 
-Notas rápidas:
-- No subas tu `.env` al repositorio.
-- El proyecto se publica como demo del código; no hay un ejecutable (.exe) oficial en este repositorio.
-- Si quieres desplegar públicamente, considera Streamlit Cloud o un servidor con Python 3.11.
+### Estado y alcance
 
-Si necesitas que deje algún archivo de ejemplo (por ejemplo un CSV de prueba) en la carpeta `data/`, dímelo y lo añado.
+- Propósito: demo del código y patrones de diseño para análisis de datos con Streamlit. No se distribuye ni se soporta un ejecutable empaquetado.
+- Responsabilidad: esta entrega incluye solo el código fuente y documentación mínima; si deseas que prepare builds o paquetes instalables, podemos hacerlo como tarea separada.
+
+### Contacto y contribuciones
+
+Si deseas mejorar el proyecto, abre un issue o crea un PR. Para cambios grandes o despliegue, preferimos propuestas pequeñas y pruebas que permitan validar el comportamiento.
+
+---
+
+Gracias por revisar el proyecto. Si quieres que incluya un dataset de ejemplo o instrucciones de despliegue adicionales, me indicas y lo preparo.
 
