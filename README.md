@@ -59,20 +59,15 @@ Puedes descargar la versión empaquetada desde la sección de Releases: https://
 
 Descarga el ZIP de la release y extrae el contenido; luego haz doble click en `Iniciar_Programa.bat` (Windows) o ejecuta `./run.sh` (macOS/Linux).
 
-## Release descargable (Windows)
+## Nota sobre empaquetado (Windows)
 
-- Release: [v1.0.4](https://github.com/juaquinedca/Copiloto-de-an-lisis-de-ficheros-con-IA/releases/tag/v1.0.4)
-- Asset: `AnalizarDatosIA-v1.0.4-windows.zip` (extraer y hacer doble click en `AnalizarDatosIA.exe`)
+El empaquetado como ejecutable (.exe) está desactivado por ahora debido a problemas de compatibilidad y empaquetado (metadatos faltantes, alertas de antivirus/SmartScreen). Para ejecutar la aplicación de forma fiable, descarga o clona el repositorio y usa los lanzadores incluidos:
 
-**Verificación:** SHA256 checksum para la descarga oficial (archivo `ASSETS_CHECKSUMS.txt` en el repo):
+- Windows: doble click en `Iniciar_Programa.bat` (crea y activa `.venv`, instala dependencias y lanza Streamlit).
+- PowerShell: `Iniciar_Programa.ps1` (ver sección Quick start).
+- macOS / Linux: `./run.sh`.
 
-```
-AnalizarDatosIA-v1.0.4-windows.zip  6753E82E18948EC73BC2A46ABD4329E2BAA265E26AF6CDC3421262C848B71CA5
-```
-
-Badge de descarga rápida (Release v1.0.4):
-
-[![Release v1.0.4](https://img.shields.io/badge/release-v1.0.4-blue)](https://github.com/juaquinedca/Copiloto-de-an-lisis-de-ficheros-con-IA/releases/tag/v1.0.4)
+Sigue la sección "Quick start (ejecución con un solo click o comando)" para instrucciones detalladas y para crear el archivo `.env` con `GROQ_API_KEY`.
 
 ## Capturas de pantalla
 
