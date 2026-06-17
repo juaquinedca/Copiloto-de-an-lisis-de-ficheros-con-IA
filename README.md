@@ -1,4 +1,4 @@
-﻿# 🤖 Asistente de Análisis de Datos — Demo
+﻿#  Asistente de Análisis de Datos con IA — Demo
 
 Código de demostración: una interfaz de análisis de datos construida con Streamlit que facilita la exploración rápida de datasets (CSV, Excel, JSON) y la generación de insights.
 
@@ -88,13 +88,6 @@ Alternativa de doble click (Windows): usa `Iniciar_Programa.bat` — el script c
 ### Estado y alcance
 
 - Propósito: demo del código y patrones de diseño para análisis de datos con Streamlit. No se distribuye ni se soporta un ejecutable empaquetado.
-- Responsabilidad: esta entrega incluye solo el código fuente y documentación mínima; si deseas que prepare builds o paquetes instalables, podemos hacerlo como tarea separada.
+- Responsabilidad: esta entrega incluye solo el código fuente y documentación mínima.
 
-### Contacto y contribuciones
-
-Si deseas mejorar el proyecto, abre un issue o crea un PR. Para cambios grandes o despliegue, preferimos propuestas pequeñas y pruebas que permitan validar el comportamiento.
-
----
-
-Gracias por revisar el proyecto. Si quieres que incluya un dataset de ejemplo o instrucciones de despliegue adicionales, me indicas y lo preparo.
 
