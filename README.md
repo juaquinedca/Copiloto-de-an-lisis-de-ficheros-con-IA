@@ -53,6 +53,12 @@ Notas:
 - No subas tu `.env` al repositorio; el script pregunta si deseas crearlo localmente.
 - Para una demo pública inmediata, también puedes desplegar el repo en Streamlit Cloud conectando tu cuenta de GitHub.
 
+### Descargar release lista para ejecutar
+
+Puedes descargar la versión empaquetada desde la sección de Releases: https://github.com/juaquinedca/Copiloto-de-an-lisis-de-ficheros-con-IA/releases/tag/v1.0
+
+Descarga el ZIP de la release y extrae el contenido; luego haz doble click en `Iniciar_Programa.bat` (Windows) o ejecuta `./run.sh` (macOS/Linux).
+
 ## Capturas de pantalla
 
 Las siguientes imágenes muestran la interfaz y las funcionalidades principales en el mismo orden en que se navega la aplicación.
