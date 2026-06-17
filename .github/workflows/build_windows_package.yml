@@ -25,7 +25,12 @@ jobs:
 
       - name: Build with PyInstaller (onedir)
         run: |
-          pyinstaller --noconfirm --onedir --name AnalizarDatosIA launcher.py --add-data "app.py;." --add-data "imagenes;imagenes"
+          pyinstaller --noconfirm --onedir --name AnalizarDatosIA launcher.py \
+            --collect-all streamlit \
+            --collect-all importlib_metadata \
+            --add-data "app.py;." \
+            --add-data "imagenes;imagenes" \
+            --log-level DEBUG
 
       - name: Create zip of dist folder
         run: |
