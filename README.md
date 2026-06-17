@@ -13,22 +13,40 @@ Aplicación web interactiva construida con Streamlit que permite analizar datase
 - Streamlit, Pandas, Matplotlib, Seaborn
 - LangChain + Groq (requiere GROQ_API_KEY)
 
-## Instalación (local)
-`powershell
+## Instalación y ejecución (local) — guía mínima
+
+Requisitos: tener Python 3.11 instalado.
+
+Pasos (Windows, desde PowerShell):
+```powershell
+git clone https://github.com/juaquinedca/Copiloto-de-an-lisis-de-ficheros-con-IA.git
+cd Copiloto-de-an-lisis-de-ficheros-con-IA
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
 pip install -r requirements.txt
-`
-
-Configura tu clave de Groq en un archivo .env en la raíz:
-`
-GROQ_API_KEY=tu_clave_aqui
-`
-
-Ejecuta la aplicación:
-```powershell
+# (opcional) crear .env con tu clave GROQ_API_KEY
+echo GROQ_API_KEY=tu_clave_aqui > .env
 streamlit run app.py
 ```
+
+Si prefieres un doble click en Windows, usa `Iniciar_Programa.bat` (crea y activa `.venv`, instala dependencias e inicia Streamlit). El script preguntará si deseas crear `.env`.
+
+macOS / Linux (bash):
+```bash
+git clone https://github.com/juaquinedca/Copiloto-de-an-lisis-de-ficheros-con-IA.git
+cd Copiloto-de-an-lisis-de-ficheros-con-IA
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+./run.sh
+```
+
+Notas:
+- No incluyas tu `.env` en el repositorio.
+- Si no necesitas las funciones que usan Groq/LangChain, puedes ejecutar la app sin la variable `GROQ_API_KEY`.
+- Si encuentras errores, abre un issue describiendo tu sistema operativo y salida del terminal.
 
 ## Quick start (ejecución con un solo click o comando)
 
